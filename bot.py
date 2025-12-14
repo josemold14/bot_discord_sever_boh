@@ -1,3 +1,8 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # <--- Carga las variables del archivo .env
+
 import discord
 from discord.ext import commands
 
@@ -143,4 +148,4 @@ async def regole(ctx):
 
 # *** IL PASSO PIÙ CRITICO: IL TUO TOKEN ***
 # SOSTITUISCI 'IL_TUO_TOKEN_SEGRETO_QUI' con il token del tuo bot.
-bot.run('MTQ0OTUxNTg0NTk3MjkyMjU1Mg.Ge-FQt.uNUtm7fWbU2CeVlW6sGUAPmerz_65346Wd1ke0')
+bot.run(os.getenv("DISCORD_TOKEN"))
